@@ -1,0 +1,153 @@
+@import 'src/Common/Style/Variables';
+
+$employees-mosaic__employee-width: 200px;
+$employees-mosaic__employee-margin: 10px;
+
+$employees-mosaic__image-size: 150px;
+$employees-mosaic__email-size: 30px;
+
+.employees-mosaic{
+    display: inline-block;
+    text-align: center;
+    line-height: 0;
+    max-width: ($employees-mosaic__employee-width + ($employees-mosaic__employee-margin * 2)) * 5;
+}
+.employees-mosaic__employee{
+    display: inline-block;
+    margin: 30px 10px;
+    position: relative;
+    line-height: normal;
+    width: 200px;
+    vertical-align: top;
+}
+
+.employees-mosaic__employee__profile{
+    display: inline-block;
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+    width: $employees-mosaic__image-size;
+    height: $employees-mosaic__image-size;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 0 0 0 rgba($color-violet, 0.5);
+    transition: box-shadow 100ms ease-in-out;
+    &:focus{
+        outline: none;
+        box-shadow: 0 0 1px 2px rgba($color-violet, 0.5);
+        .employees-mosaic__employee__profile__image--filter{
+            opacity: 0.1;
+        }
+    }
+    &:hover, &:focus{
+        outline: none;
+        box-shadow: 0 0 0.5px 2px rgba($color-violet, 0.5);
+        .employees-mosaic__employee__profile__image--filter{
+            opacity: 0.1;
+        }
+    }
+}
+
+.employees-mosaic__employee__profile__image{
+    display: inline-block;
+    position: absolute;
+    left: -5%;
+    top: -5%;
+    width: 110%;
+    height: 110%;
+    background: {
+        position: center center;
+        size: cover;
+        clip: content-box;
+        color: #FFF;
+    }
+    box-sizing: border-box;
+    pointer-events: none;
+    &--filter{
+        @extend .employees-mosaic__employee__profile__image;
+        opacity: 0.99;
+        transition: opacity 100ms ease-in-out;
+        // &:after{
+        //     content: "";
+        //     position: absolute;
+        //     top:0;
+        //     left:0;
+        //     width: 100%;
+        //     height: 100%;
+        //     backdrop-filter: url(#employeeFilter);
+        // }
+    }
+}
+.employees-mosaic__employee__mail{
+    $openingTime: 330ms;
+    $slidingTime: 150ms;
+    position: absolute;
+    top: $employees-mosaic__image-size / 6.28 - ($employees-mosaic__email-size / 2);
+    // right: $employees-mosaic__image-size / 6.28 - ($employees-mosaic__email-size / 2);
+    left: calc(50% + #{$employees-mosaic__image-size / 3.14 - ($employees-mosaic__email-size / 2)});
+    border-radius: 50%;
+    background-color: $color-violet;
+    color: #FFF;
+    text-decoration: none;
+    width: $employees-mosaic__email-size;
+    height: $employees-mosaic__email-size;
+    line-height: $employees-mosaic__email-size;
+    text-align: center;
+    transition: transform 150ms ease-in-out, box-shadow 150ms ease-in-out;
+    padding: 5px;
+    box-sizing: border-box;
+    font-size: 0;
+    box-shadow: 0 0 0 0 rgba($color-violet, 0.5);
+    &:hover, &:focus{
+        outline: none;
+        transform: scale(1.2);
+        box-shadow: 1px 1px 2px 0px rgba(#000, 0.7);
+        .employees-mosaic__employee__mail__top{
+            transform: rotateX(270deg);
+            transition-delay: $slidingTime;
+        }
+        .employees-mosaic__employee__mail__back{
+            transform: translateY(-10px);
+            transition-delay: $openingTime;
+        }
+    }
+    svg{
+        width: 80%;
+        margin-top: -3px;
+        path{
+            fill:#FFF;
+            stroke-width: none;
+        }
+        .employees-mosaic__employee__mail__top{
+            transform: rotateX(0deg);
+            transform-origin: 50% 40px;
+            transition: transform $openingTime ease-in-out;
+            transition-delay: 0ms;
+        }
+        .employees-mosaic__employee__mail__back{
+            fill:rgba(#FFF, 0.5);
+            transition: transform $slidingTime ease-in-out;
+        }
+    }
+}
+
+#employee-filter-svg{
+    display: none;
+}
+
+.employees-mosaic__employee__name{
+    color: $color-violet;
+    margin: 10px 0;
+    font-weight: 400;
+}
+.employees-mosaic__employee__position{
+    color: $color-blue;
+    font-weight: 300;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+.employees-mosaic__employee__location{
+    color: #000;
+    font-weight: 300;
+    font-size: 0.9rem;
+}

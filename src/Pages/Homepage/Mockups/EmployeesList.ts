@@ -19,21 +19,21 @@ export enum EmployeePosition {
 }
 
 export enum EmployeeImages {
-  p0 = '/images/team/person_0.png',
-  p1 = '/images/team/person_1.png',
-  p2 = '/images/team/person_2.png',
-  p3 = '/images/team/person_3.png',
-  p4 = '/images/team/person_4.png',
+  p0 = 'images/team/person_0.png',
+  p1 = 'images/team/person_1.png',
+  p2 = 'images/team/person_2.png',
+  p3 = 'images/team/person_3.png',
+  p4 = 'images/team/person_4.png',
 }
 export enum EmployeeFilteredImages {
-  p0 = '/images/team/person_0_filtered.png',
-  p1 = '/images/team/person_1_filtered.png',
-  p2 = '/images/team/person_2_filtered.png',
-  p3 = '/images/team/person_3_filtered.png',
-  p4 = '/images/team/person_4_filtered.png',
+  p0 = 'images/team/person_0_filtered.png',
+  p1 = 'images/team/person_1_filtered.png',
+  p2 = 'images/team/person_2_filtered.png',
+  p3 = 'images/team/person_3_filtered.png',
+  p4 = 'images/team/person_4_filtered.png',
 }
 
-const employeeBackgroundImage = '/images/slider_bg.png';
+const employeeBackgroundImage = 'images/slider_bg.png';
 
 const EmployeesList: IEmployee[] = [
   {

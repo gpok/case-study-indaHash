@@ -1,10 +1,10 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
 import Homepage from './Homepage';
 
 function App() {
   return (
-    <div className="app">
+    <div className="app" style={{ backgroundImage: "url('images/bg.png')" }}>
       <Homepage />
     </div>
   );

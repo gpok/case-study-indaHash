@@ -11,14 +11,21 @@ $employees-mosaic__email-size: 30px;
     text-align: center;
     line-height: 0;
     max-width: ($employees-mosaic__employee-width + ($employees-mosaic__employee-margin * 2)) * 5;
+    @media (max-width: 700px) {
+        max-width: (($employees-mosaic__employee-width * 0.7) + ($employees-mosaic__employee-margin * 2 * 0.3)) * 5;
+    }
 }
 .employees-mosaic__employee{
     display: inline-block;
-    margin: 30px 10px;
+    margin: 30px $employees-mosaic__employee-margin;
     position: relative;
     line-height: normal;
-    width: 200px;
+    width: $employees-mosaic__employee-width;
     vertical-align: top;
+    @media (max-width: 700px) {
+        width: $employees-mosaic__employee-width * 0.7;
+        margin: 30px $employees-mosaic__employee-margin * 0.3;
+    }
 }
 
 .employees-mosaic__employee__profile{
@@ -46,6 +53,10 @@ $employees-mosaic__email-size: 30px;
             opacity: 0.1;
         }
     }
+    @media (max-width: 700px) {
+        width: $employees-mosaic__image-size * 0.7;
+        height: $employees-mosaic__image-size * 0.7;
+    }
 }
 
 .employees-mosaic__employee__profile__image{
@@ -67,15 +78,6 @@ $employees-mosaic__email-size: 30px;
         @extend .employees-mosaic__employee__profile__image;
         opacity: 0.99;
         transition: opacity 100ms ease-in-out;
-        // &:after{
-        //     content: "";
-        //     position: absolute;
-        //     top:0;
-        //     left:0;
-        //     width: 100%;
-        //     height: 100%;
-        //     backdrop-filter: url(#employeeFilter);
-        // }
     }
 }
 .employees-mosaic__employee__mail{

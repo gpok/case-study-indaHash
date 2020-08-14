@@ -90,17 +90,35 @@ $slider-wrapper__animation-time: 200ms;
     border-image-width: 3px;
     border-image-slice: 11;
     border-image-repeat: round;
-    margin: 0 50px
+    margin: 0 50px;
+    @media (max-width: 768px) {
+        padding: 10px;
+    }
 }
 .slider__slide__data__header{
     display: block;
     font-size: 40px;
     font-weight: 300;
+    @media (max-width: 500px) {
+        font-size: 30px;
+    }
+    @media (max-width: 400px) {
+        font-size: 20px;
+    }
 }
 .slider__slide__data__content{
     display: block;
     font-size: 60px;
     font-weight: 600;
+    @media (max-width: 500px) {
+        font-size: 50px;
+    }
+    @media (max-width: 400px) {
+        font-size: 40px;
+    }
+    @media (max-width: 350px) {
+        font-size: 25px;
+    }
 }
 
 .slider__button{

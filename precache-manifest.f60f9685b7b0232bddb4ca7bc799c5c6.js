@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "19df7f625efd8d798d0fdcb3b99ac453",
+    "revision": "ae3065ab5b8a14301c1d94c061bd22c3",
     "url": "/case-study-indaHash/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/case-study-indaHash/static/css/2.80fb0fca.chunk.css"
   },
   {
-    "revision": "a2dc91cfc63ad9826a40",
-    "url": "/case-study-indaHash/static/css/main.0695418b.chunk.css"
+    "revision": "ae109967464f5f34129e",
+    "url": "/case-study-indaHash/static/css/main.01e4c9de.chunk.css"
   },
   {
     "revision": "00ea834c588ac6c13465",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/case-study-indaHash/static/js/2.64b9137b.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a2dc91cfc63ad9826a40",
-    "url": "/case-study-indaHash/static/js/main.7c5cdf08.chunk.js"
+    "revision": "ae109967464f5f34129e",
+    "url": "/case-study-indaHash/static/js/main.ddd1c49b.chunk.js"
   },
   {
     "revision": "4305da6bc35b750721ec",
